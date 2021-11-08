@@ -18,20 +18,24 @@
 <!--            </field>-->
 <!--        </record>-->
 
-<!--        &lt;!&ndash; Course tree view &ndash;&gt;-->
-<!--        <record model="ir.ui.view" id="course_tree_view">-->
-<!--            <field name="name">course.tree.view</field>-->
-<!--            <field name="model">openacademy.course</field>-->
-<!--            <field name="arch" type="xml">-->
-<!--                <tree string="Course list">-->
-<!--                    <field name="name"/>-->
-<!--                    <field name="description"/>-->
-<!--                </tree>-->
-<!--            </field>-->
-<!--        </record>-->
+        <!-- Session tree view -->
+        <record model="ir.ui.view" id="session_tree_view">
+            <field name="name">session.tree.view</field>
+            <field name="model">openacademy.session</field>
+            <field name="arch" type="xml">
+                <tree string="Session list">
+                    <field name="name"/>
+                    <field name="start_date"/>
+                    <field name="duration"/>
+                    <field name="seats"/>
+                    <field name="instructor_id"/>
+                    <field name="course_id"/>
+                </tree>
+            </field>
+        </record>
 
 
-        <!-- Course action -->
+        <!-- Session action -->
         <record model="ir.actions.act_window" id="session_list_action">
             <field name="name">Sessions</field>
             <field name="res_model">openacademy.session</field>

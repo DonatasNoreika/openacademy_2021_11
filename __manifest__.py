@@ -29,6 +29,7 @@
         # 'views/course_view.xml',
         'views/course_view.xml',
         'views/session_view.xml',
+        'views/res_partner_view_inherited.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

@@ -23,11 +23,12 @@
                         <field name="name"/>
                         <field name="responsible_id"/>
                         <field name="session_ids">
-                            <tree>
+                            <tree editable="bottom">
                                 <field name="name"/>
                                 <field name="start_date"/>
                                 <field name="duration"/>
                                 <field name="seats"/>
+                                <field name="instructor_id"/>
                             </tree>
                             <form>
                                 <group>

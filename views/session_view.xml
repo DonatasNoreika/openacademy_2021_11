@@ -29,7 +29,7 @@
             <field name="name">session.tree.view</field>
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
-                <tree string="Session list">
+                <tree string="Session Tree" decoration-info="duration&lt;5" decoration-danger="duration&gt;15">
                     <field name="name"/>
                     <field name="start_date"/>
                     <field name="duration"/>

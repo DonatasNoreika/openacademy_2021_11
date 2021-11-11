@@ -1,5 +1,22 @@
 <odoo>
 
+        <record model="ir.ui.view" id="course_search_view">
+            <field name="name">course.search</field>
+            <field name="model">openacademy.course</field>
+            <field name="arch" type="xml">
+                <search>
+                    <field name="name"/>
+                    <field name="description"/>
+                    <filter name="my_courses" string="My Courses"
+                            domain="[('responsible_id', '=', uid)]"/>
+                    <group string="Group By">
+                        <filter name="by_responsible" string="Responsible"
+                                context="{'group_by': 'responsible_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
         <!-- Res partner inherited form view -->
         <record model="ir.ui.view" id="view_partner_form_inherited">
             <field name="name">partner.instructor</field>

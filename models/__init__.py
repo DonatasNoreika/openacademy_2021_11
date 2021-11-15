@@ -3,3 +3,4 @@
 from . import course
 from . import session
 from . import res_partner_inherited
+from . import registration_wizard

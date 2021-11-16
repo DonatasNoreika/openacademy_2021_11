@@ -21,7 +21,7 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base'],
+    'depends': ['base','board'],
 
     # always loaded
     'data': [
@@ -32,6 +32,7 @@
         'views/res_partner_view_inherited.xml',
         'views/registration_wizard_view.xml',
         'reports/session_report.xml',
+        'views/session_board.xml',
     ],
     # only loaded in demonstration mode
     'demo': [

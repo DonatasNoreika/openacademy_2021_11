@@ -12,6 +12,7 @@ class Course(models.Model):
     responsible_id = fields.Many2one('res.users', string="Responsible", ondelete='set null')
     session_ids = fields.One2many('openacademy.session', 'course_id', string="Sessions", )
     image = fields.Binary("Image", attachment=True)
+    document_ids = fields.One2many('openacademy.document', 'course_id', string='Documents')
 
     _sql_constraints = [
         ('name_description_check',
@@ -35,3 +36,13 @@ class Course(models.Model):
 
         default['name'] = new_name
         return super(Course, self).copy(default)
+
+
+class SessionDocument(models.Model):
+    _name = 'openacademy.document'
+
+    name = fields.Char(string='Filename')
+    file = fields.Binary(string=_('File'), attachment=True)
+    comment = fields.Text(string=_('Notes'))
+
+    course_id = fields.Many2one('openacademy.course')

@@ -19,6 +19,7 @@
             <field name="model">openacademy.course</field>
             <field name="arch" type="xml">
                 <form string="Course form">
+                    <field name="image" widget="image"/>
                     <group>
                         <field name="name"/>
                         <field name="responsible_id"/>
@@ -58,6 +59,7 @@
             <field name="model">openacademy.course</field>
             <field name="arch" type="xml">
                 <tree string="Course list">
+                    <field name="image" widget="image"/>
                     <field name="name"/>
                     <field name="description"/>
                 </tree>

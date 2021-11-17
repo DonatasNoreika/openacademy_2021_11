@@ -23,6 +23,7 @@ class Session(models.Model):
         string="Attendees count", compute='_get_attendees_count', store=True)
     active = fields.Boolean(default=True)
     color = fields.Integer()
+    image = fields.Binary("Image", attachment=True)
 
     status = fields.Selection([
         ('draft', "Draft"),

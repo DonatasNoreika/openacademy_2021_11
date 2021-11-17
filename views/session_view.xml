@@ -66,6 +66,7 @@
             <field name="model">openacademy.session</field>
             <field name="arch" type="xml">
                 <form string="Session form">
+                    <field name="image" widget="image"/>
                     <header>
                         <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
                     </header>

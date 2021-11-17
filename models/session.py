@@ -24,6 +24,14 @@ class Session(models.Model):
     active = fields.Boolean(default=True)
     color = fields.Integer()
 
+    status = fields.Selection([
+        ('draft', "Draft"),
+        ('started', "Started"),
+        ('done', "Done"),
+        ('cancelled', "Cancelled"),
+    ], string="Progress", default='draft', translate=True)
+
+
     @api.depends('attendee_ids')
     def _get_attendees_count(self):
         for r in self:

@@ -21,12 +21,13 @@
     'version': '0.1',
 
     # any module necessary for this one to work correctly
-    'depends': ['base','board'],
+    'depends': ['base','board','mail'],
 
     # always loaded
     'data': [
         'security/security.xml',
         'security/ir.model.access.csv',
+        'mail_templates.xml',
         'views/course_view.xml',
         'views/session_view.xml',
         'views/res_partner_view_inherited.xml',

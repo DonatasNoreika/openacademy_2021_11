@@ -89,3 +89,12 @@ class Session(models.Model):
             # Compute the difference between dates, but: Friday - Monday = 4 days,
             # so add one day to get 5 days instead
             r.duration = (r.end_date - r.start_date).days + 1
+
+    def send_session_report(self):
+        # Find the e-mail template
+        template = self.env.ref('openacademy.openacademy_session_mail_template')
+        # You can also find the e-mail template like this:
+        # template = self.env['ir.model.data'].get_object('send_mail_template_demo', 'example_email_template')
+
+        # Send out the e-mail template to the user
+        self.env['mail.template'].browse(template.id).send_mail(self.id)

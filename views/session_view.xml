@@ -68,6 +68,7 @@
                 <form string="Session form">
                     <field name="image" widget="image"/>
                     <header>
+                        <button name="send_session_report" string="Send info to Instructor" type="object" class="oe_highlight" confirm="Send Session info to Instructor?"/>
                         <field name="status" widget="statusbar" options="{'clickable': '1'}"/>
                     </header>
                     <group string="General">
